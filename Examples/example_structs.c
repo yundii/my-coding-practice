@@ -32,6 +32,7 @@ void updateStudent(student* aStudent, int id, int age, double creditHours) {
 //}
 
 void printStudent(student* aStudent) {
+	// printf("Student: %d %d %.2f\n", (*aStudent).id, (*aStudent).age, (*aStudent).creditHours);
 	printf("Student: %d %d %.2f\n", aStudent->id, aStudent->age, aStudent->creditHours);
 }
 
