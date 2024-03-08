@@ -49,4 +49,38 @@ int addHelper(node_t* node, node_t* newNode){
 		}
 		addHelper(node->right, newNode);
 	}
+
+void printHelper(node_t* node) {
+	if (node == NULL) {
+		return;
+	}
+	printHelper(node->left);
+	printf("%d ", node->data);
+	printHelper(node->right);
+
+void print(tree_t* t) {
+	if (t == NULL) {
+		return;
+	}
+	printHelper(t->root);
+}
+
+void bfs(tree_t* t) {
+	if (t == NULL) {
+		return;
+	}
+	queue_t* q = makeQueue();
+	push(q, t->root);
+	while (!empty(q)) {
+		node_t* elem = pop(q);
+		printf("%d ", elem->data);
+		if (elem->left != NULL) {
+			push(q, elem->left);
+		}
+		if (elem->right != NULL) {
+			push(q, elem->right);
+		}
+	}
+}
+	
 }
