@@ -1,12 +1,15 @@
 #include <stdio.h>
 
 int main(void){
-	int amount;
+	int amount1;
+	int amount2;
 
 	printf("What is your amount?\n");
-	scanf("%d", &amount);
+	scanf("%d %d", &amount1, &amount2);
+
+	const int NUMBER = 100;
 	
-	int change = 100 - amount;
+	int change = NUMBER - amount1 - amount2;
 
 	printf("Change  %d dollars\n", change);
 
