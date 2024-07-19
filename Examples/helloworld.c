@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 int main(void){
-	int classNumber;
+	int amount;
 
-	printf("What is your class number?\n");
-	scanf("%d", &classNumber);
+	printf("What is your amount?\n");
+	scanf("%d", &amount);
+	
+	int change = 100 - amount;
 
-	printf("Hello CS %d\n", classNumber);
+	printf("Change  %d dollars\n", change);
 
 	return 0;
 }
