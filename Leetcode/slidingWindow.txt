@@ -1,0 +1,21 @@
+滑动窗口伪代码框架 
+
+def slidingWindow(s: str):
+    window = ...
+    left, right = 0, 0
+    while right < len(s):
+        c = s[right]
+        window.add(c)
+        right += 1
+        ...
+
+        while left < right and window need shrink:
+            d = s[left]
+            window.remove(d)
+            left+=1
+            ...
+
+1. when to move right, after move, update which data
+2. when window need shrink, after move left, update which data
+3. when to update result
+
